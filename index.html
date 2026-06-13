@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 <script src="deck-stage.js"></script>
+<link rel="preload" as="image" href="assets/cover-pulse.jpg" />
 <link rel="stylesheet" href="styles-mindset.css" />
 <link rel="stylesheet" href="styles-system.css" />
 <link rel="stylesheet" href="styles-build.css" />
@@ -537,7 +538,7 @@
 
   <!-- ============ L00 標題頁 ============ -->
   <section class="slide full s-title" data-label="L00 標題頁" data-screen-label="Title">
-    <div class="bg" style="background-image:url('assets/cover-pulse.png');"></div>
+    <div class="bg" style="background-image:url('assets/cover-pulse.jpg');"></div>
     <div class="scrim" style="background:linear-gradient(270deg,rgba(10,14,26,0.88) 0%,rgba(10,14,26,0.5) 36%,rgba(10,14,26,0.04) 62%);"></div>
     <div class="scrim" style="background:linear-gradient(180deg,transparent 72%,rgba(10,14,26,0.85) 100%);"></div>
     <div class="title-center" style="left:auto;right:var(--pad-x);top:42%;transform:translateY(-50%);text-align:right;width:1150px;">
@@ -606,7 +607,7 @@
   </section>
 
   <section class="slide full" data-label="P04 一切的起點" data-screen-label="P04">
-    <div class="bg" style="background-image:url('assets/p04.png')"></div>
+    <div class="bg" style="background-image:url('assets/p04.jpg')"></div>
     <div class="scrim left"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 成果介紹</span><span class="pg">P3 / 48</span></div>
     <div class="full-body" style="max-width:1180px;">
@@ -619,7 +620,7 @@
   </section>
 
   <section class="slide full" data-label="P05 Case 1 Mini Taipei" data-screen-label="P05">
-    <video class="bg" src="assets/mini-tw-v2.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+    <video class="bg" data-src="assets/mini-tw-v2.mp4" preload="none" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 成果介紹</span><span class="pg">P4 / 48</span></div>
     <div class="full-body">
@@ -639,11 +640,11 @@
   </section>
 
   <section class="slide full" data-label="P06 Case 2 衛星" data-screen-label="P06">
-    <video class="bg" src="assets/satellite.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+    <video class="bg" data-src="assets/satellite.mp4" preload="none" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 成果介紹</span><span class="pg">P5 / 48</span></div>
     <div class="bridge-card anim" style="position:absolute;right:var(--pad-x);top:150px;width:430px;aspect-ratio:1/1;z-index:4;border-radius:12px;">
-      <div class="ci" style="background-image:url('assets/p06_solar.png')"></div>
+      <div class="ci" style="background-image:url('assets/p06_solar.jpg')"></div>
       <div class="cap" style="left:22px;bottom:18px;"><div class="m">SOLAR SYSTEM</div></div>
     </div>
     <div class="full-body" style="max-width:1180px;">
@@ -655,7 +656,7 @@
   </section>
 
   <section class="slide full" data-label="P07 Case 3 船舶" data-screen-label="P07">
-    <video class="bg" src="assets/ship.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+    <video class="bg" data-src="assets/ship.mp4" preload="none" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 成果介紹</span><span class="pg">P6 / 48</span></div>
     <div class="full-body">
@@ -675,7 +676,7 @@
   </section>
 
   <section class="slide full" data-label="P08 Case 4 Pulse" data-screen-label="P08">
-    <video class="bg" src="assets/mini-pulse.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+    <video class="bg" data-src="assets/mini-pulse.mp4" preload="none" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 成果介紹</span><span class="pg">P7 / 48</span></div>
     <div class="full-body">
@@ -691,7 +692,7 @@
   </section>
 
   <section class="slide full" data-label="P09 整合 農×水" data-screen-label="P09">
-    <div class="bg" style="background-image:url('assets/p09.png')"></div>
+    <div class="bg" style="background-image:url('assets/p09.jpg')"></div>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 整合案例</span><span class="pg">P8 / 48</span></div>
     <div class="legend anim" style="right:var(--pad-x);top:150px;">
@@ -715,7 +716,7 @@
   </section>
 
   <section class="slide full" data-label="P10 整合 醫療資源" data-screen-label="P10">
-    <div class="bg" style="background-image:url('assets/p10.png')"></div>
+    <div class="bg" style="background-image:url('assets/p10.jpg')"></div>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 整合案例</span><span class="pg">P9 / 48</span></div>
     <div class="full-body">
@@ -734,7 +735,7 @@
   </section>
 
   <section class="slide full" data-label="P11 整合 大雨與災害" data-screen-label="P11">
-    <video class="bg" src="assets/water.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+    <video class="bg" data-src="assets/water.mp4" preload="none" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 整合案例</span><span class="pg">P10 / 48</span></div>
     <div class="full-body">
@@ -777,13 +778,9 @@
 
 
   <section class="slide full" data-label="P14 模式① 軌跡視覺化" data-screen-label="P14">
-    <div class="bg" style="background-image:url('assets/p14.png')"></div>
+    <video class="bg" data-src="assets/taoyuan.mp4" preload="none" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · FLIGHT ARC</span><span class="pg">P12 / 48</span></div>
-    <div class="callout anim" style="left:55%;top:13%;align-items:flex-start;">
-      <div class="lbl">東京灣迴旋進場 ↘</div>
-      <div class="ln" style="width:160px;"></div>
-    </div>
     <div class="full-body">
       <div class="bottom-row">
         <div style="max-width:1180px;">
@@ -792,8 +789,7 @@
           <p class="sub anim d2">把一段時間的所有起降，畫成一張航跡圖 —— 高度色變 + 光軌拖尾，疊起來就是機場的<strong>「指紋」</strong>。</p>
         </div>
         <ul class="meta-list anim d2">
-          <li><strong>RJTT</strong> 羽田</li>
-          <li>1,318 TRACKS</li>
+          <li><strong>RCTP</strong> 桃園</li>
         </ul>
       </div>
     </div>
@@ -801,10 +797,10 @@
 
   <section class="slide s-gallery" data-label="P14a 軌跡畫廊" data-screen-label="P14a">
     <div class="gal">
-      <div class="cell"><div class="ci" style="background-image:url('assets/p14a_hk.png')"></div><div class="icao"><div class="code">VHHH</div><div class="nm">香港</div></div></div>
-      <div class="cell"><div class="ci" style="background-image:url('assets/p14a_fra.png')"></div><div class="icao"><div class="code">EDDF</div><div class="nm">法蘭克福</div></div></div>
-      <div class="cell"><div class="ci" style="background-image:url('assets/p13_top.png')"></div><div class="icao"><div class="code">RCTP</div><div class="nm">桃園</div></div></div>
-      <div class="cell"><div class="ci" style="background-image:url('assets/p14.png')"></div><div class="icao"><div class="code">RJTT</div><div class="nm">羽田</div></div></div>
+      <div class="cell"><div class="ci" style="background-image:url('assets/p14a_hk.jpg')"></div><div class="icao"><div class="code">VHHH</div><div class="nm">香港</div></div></div>
+      <div class="cell"><div class="ci" style="background-image:url('assets/p14a_fra.jpg')"></div><div class="icao"><div class="code">EDDF</div><div class="nm">法蘭克福</div></div></div>
+      <div class="cell"><div class="ci" style="background-image:url('assets/p13_top.jpg')"></div><div class="icao"><div class="code">RCTP</div><div class="nm">桃園</div></div></div>
+      <div class="cell"><div class="ci" style="background-image:url('assets/p14.jpg')"></div><div class="icao"><div class="code">RJTT</div><div class="nm">羽田</div></div></div>
     </div>
     <div style="position:absolute;top:42px;left:50%;transform:translateX(-50%);z-index:4;display:flex;align-items:center;gap:20px;
       background:rgba(10,14,26,0.7);border:1px solid var(--line-strong);border-radius:40px;padding:14px 32px;backdrop-filter:blur(8px);">
@@ -815,7 +811,7 @@
   </section>
 
   <section class="slide full" data-label="P14b 亞特蘭大 KATL" data-screen-label="P14b">
-    <div class="bg" style="background-image:url('assets/p14b.png')"></div>
+    <video class="bg" data-src="assets/atlanta.mp4" preload="none" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 軌跡畫廊</span><span class="pg">P13 / 48</span></div>
     <div class="full-body" style="max-width:1000px;">
@@ -827,7 +823,7 @@
   </section>
 
   <section class="slide full" data-label="P15 模式② 跟隨模式" data-screen-label="P15">
-    <div class="bg" style="background-image:url('assets/p15.png')"></div>
+    <div class="bg" style="background-image:url('assets/p15.jpg')"></div>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · FLIGHT ARC</span><span class="pg">P14 / 48</span></div>
     <div class="callout anim" style="right:14%;top:28%;align-items:flex-end;">
@@ -842,7 +838,7 @@
   </section>
 
   <section class="slide full" data-label="P16 模式③ 進場管制區" data-screen-label="P16">
-    <div class="bg" style="background-image:url('assets/p16.png')"></div>
+    <div class="bg" style="background-image:url('assets/p16.jpg')"></div>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · FLIGHT ARC</span><span class="pg">P15 / 48</span></div>
     <div class="full-body">
@@ -861,7 +857,7 @@
   </section>
 
   <section class="slide full" data-label="P17 案例 倫敦機場體系" data-screen-label="P17">
-    <div class="bg" style="background-image:url('assets/p17.png')"></div>
+    <div class="bg" style="background-image:url('assets/p17.jpg')"></div>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 案例</span><span class="pg">P16 / 48</span></div>
     <div class="full-body">
@@ -880,7 +876,7 @@
   </section>
 
   <section class="slide full" data-label="P18 案例 紐約都會三角" data-screen-label="P18">
-    <div class="bg" style="background-image:url('assets/p18.png')"></div>
+    <div class="bg" style="background-image:url('assets/p18.jpg')"></div>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 案例</span><span class="pg">P17 / 48</span></div>
     <div class="callout anim" style="left:56%;top:31%;align-items:flex-start;"><div class="lbl" style="color:var(--magenta);border-color:rgba(217,70,239,0.5);">KLGA</div></div>
@@ -894,7 +890,7 @@
   </section>
 
   <section class="slide full" data-label="P19 案例 時間軸地緣事件" data-screen-label="P19">
-    <div class="bg" style="background-image:url('assets/p19.png')"></div>
+    <div class="bg" style="background-image:url('assets/p19.jpg')"></div>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 案例</span><span class="pg">P18 / 48</span></div>
     <div class="legend anim" style="left:var(--pad-x);top:150px;">
@@ -912,7 +908,7 @@
   
   
   <section class="slide full" data-label="P23 OpenSky 空域覆蓋" data-screen-label="P23">
-    <div class="bg" style="background-image:url('assets/p23.png')"></div>
+    <div class="bg" style="background-image:url('assets/p23.jpg')"></div>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 資料源對比</span><span class="pg">P19 / 48</span></div>
     <div class="callout anim" style="left:55%;top:15%;align-items:flex-start;">
@@ -934,7 +930,7 @@
 
   <!-- ════════════ SECTION 02 SYSTEM 幕後系統 ════════════ -->
 <section class="slide s-cover" data-label="P27b 幕後系統 轉場" data-screen-label="System Behind">
-    <div style="position:absolute;inset:0;background-image:url('assets/sys-overview.png');background-size:cover;background-position:center;filter:grayscale(1);opacity:0.12;"></div>
+    <div style="position:absolute;inset:0;background-image:url('assets/sys-overview.jpg');background-size:cover;background-position:center;filter:grayscale(1);opacity:0.12;"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,14,26,0.9),rgba(10,14,26,0.35));"></div>
     <div class="num-mega mono" style="font-size:200px;right:40px;bottom:180px;">SYSTEM</div>
     <div class="frame" style="position:relative;z-index:2;">
@@ -950,7 +946,7 @@
   </section>
 
   <section class="slide full s-sysov" data-label="P32 系統全景" data-screen-label="P32 System Overview">
-    <div class="bg" style="background-image:url('assets/sys-overview.png');background-size:contain;background-color:#000;background-repeat:no-repeat;"></div>
+    <div class="bg" style="background-image:url('assets/sys-overview.jpg');background-size:contain;background-color:#000;background-repeat:no-repeat;"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SYSTEM · 我的這套流程</span><span class="pg">P20 / 48</span></div>
   </section>
 
@@ -1018,7 +1014,7 @@
   </section>
 
   <section class="slide full s-sysov" data-label="P33 資料接收 Overview" data-screen-label="P33 Step 01">
-    <div class="bg" style="background-image:url('assets/sys-step1.png');background-size:contain;background-color:#000;background-repeat:no-repeat;"></div>
+    <div class="bg" style="background-image:url('assets/sys-step1.jpg');background-size:contain;background-color:#000;background-repeat:no-repeat;"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SYSTEM · STEP 01 · 資料接收</span><span class="pg">P22 / 48</span></div>
   </section>
 
@@ -1114,7 +1110,7 @@
   </section>
 
   <section class="slide full s-sysov" data-label="P34 知識整合 Overview" data-screen-label="P34 Step 02">
-    <div class="bg" style="background-image:url('assets/sys-step2.png');background-size:contain;background-color:#000;background-repeat:no-repeat;"></div>
+    <div class="bg" style="background-image:url('assets/sys-step2.jpg');background-size:contain;background-color:#000;background-repeat:no-repeat;"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SYSTEM · STEP 02 · 知識整合</span><span class="pg">P25 / 48</span></div>
   </section>
 
@@ -1291,7 +1287,7 @@
   </section>
 
   <section class="slide full s-sysov" data-label="P35 分析生成 Overview" data-screen-label="P35 Step 03">
-    <div class="bg" style="background-image:url('assets/sys-step3.png');background-size:contain;background-color:#000;background-repeat:no-repeat;"></div>
+    <div class="bg" style="background-image:url('assets/sys-step3.jpg');background-size:contain;background-color:#000;background-repeat:no-repeat;"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SYSTEM · STEP 03 · 分析生成</span><span class="pg">P31 / 48</span></div>
   </section>
 
@@ -1486,7 +1482,7 @@
   </section>
 
   <section class="slide full s-sysov" data-label="P36 行動觸發 Overview" data-screen-label="P36 Step 04">
-    <div class="bg" style="background-image:url('assets/sys-step4.png');background-size:contain;background-color:#000;background-repeat:no-repeat;"></div>
+    <div class="bg" style="background-image:url('assets/sys-step4.jpg');background-size:contain;background-color:#000;background-repeat:no-repeat;"></div>
     <div class="chrome-top"><span class="mark"><i class="dot" style="background:var(--amber);box-shadow:0 0 14px var(--amber);"></i>SYSTEM · STEP 04 · 行動觸發 · 自動回饋</span><span class="pg">P34 / 48</span></div>
   </section>
 
@@ -1872,7 +1868,7 @@
 
   <!-- ============ L12 結尾 ============ -->
   <section class="slide full" data-label="L12 結尾" data-screen-label="Closing">
-    <div class="bg" style="background-image:url('assets/cover-pulse.png');"></div>
+    <div class="bg" style="background-image:url('assets/cover-pulse.jpg');"></div>
     <div style="position:absolute;inset:0;background:rgba(10,14,26,0.72);z-index:1;"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>CLOSING · 結語</span><span class="pg">P47 / 48</span></div>
     <div style="position:absolute;left:0;right:0;top:130px;text-align:center;z-index:3;">
@@ -1900,5 +1896,13 @@
   </section>
 
 </deck-stage>
+<script>
+  addEventListener('load', () => {
+    document.querySelectorAll('video[data-src]').forEach(v => {
+      v.src = v.dataset.src;
+      v.play().catch(() => {});
+    });
+  });
+</script>
 </body>
 </html>
