@@ -620,7 +620,7 @@
   </section>
 
   <section class="slide full" data-label="P05 Case 1 Mini Taipei" data-screen-label="P05">
-    <video class="bg" data-src="assets/mini-tw-v2.mp4" preload="none" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+    <video class="bg" src="assets/mini-tw-v2.mp4" preload="auto" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 成果介紹</span><span class="pg">P4 / 48</span></div>
     <div class="full-body">
@@ -640,7 +640,7 @@
   </section>
 
   <section class="slide full" data-label="P06 Case 2 衛星" data-screen-label="P06">
-    <video class="bg" data-src="assets/satellite.mp4" preload="none" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+    <video class="bg" src="assets/satellite.mp4" preload="auto" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 成果介紹</span><span class="pg">P5 / 48</span></div>
     <div class="bridge-card anim" style="position:absolute;right:var(--pad-x);top:150px;width:430px;aspect-ratio:1/1;z-index:4;border-radius:12px;">
@@ -656,7 +656,7 @@
   </section>
 
   <section class="slide full" data-label="P07 Case 3 船舶" data-screen-label="P07">
-    <video class="bg" data-src="assets/ship.mp4" preload="none" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+    <video class="bg" src="assets/ship.mp4" preload="auto" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 成果介紹</span><span class="pg">P6 / 48</span></div>
     <div class="full-body">
@@ -676,7 +676,7 @@
   </section>
 
   <section class="slide full" data-label="P08 Case 4 Pulse" data-screen-label="P08">
-    <video class="bg" data-src="assets/mini-pulse.mp4" preload="none" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+    <video class="bg" src="assets/mini-pulse.mp4" preload="auto" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 成果介紹</span><span class="pg">P7 / 48</span></div>
     <div class="full-body">
@@ -735,7 +735,7 @@
   </section>
 
   <section class="slide full" data-label="P11 整合 大雨與災害" data-screen-label="P11">
-    <video class="bg" data-src="assets/water.mp4" preload="none" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+    <video class="bg" src="assets/water.mp4" preload="auto" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 整合案例</span><span class="pg">P10 / 48</span></div>
     <div class="full-body">
@@ -778,7 +778,7 @@
 
 
   <section class="slide full" data-label="P14 模式① 軌跡視覺化" data-screen-label="P14">
-    <video class="bg" data-src="assets/taoyuan.mp4" preload="none" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+    <video class="bg" src="assets/taoyuan.mp4" preload="auto" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · FLIGHT ARC</span><span class="pg">P12 / 48</span></div>
     <div class="full-body">
@@ -811,7 +811,7 @@
   </section>
 
   <section class="slide full" data-label="P14b 亞特蘭大 KATL" data-screen-label="P14b">
-    <video class="bg" data-src="assets/atlanta.mp4" preload="none" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+    <video class="bg" src="assets/atlanta.mp4" preload="auto" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
     <div class="scrim bottom"></div>
     <div class="chrome-top"><span class="mark"><i class="dot"></i>SHOWCASE · 軌跡畫廊</span><span class="pg">P13 / 48</span></div>
     <div class="full-body" style="max-width:1000px;">
@@ -1897,21 +1897,16 @@
 
 </deck-stage>
 <script>
-  // 翻到該頁才播：第一次活躍時才掛 src 並 play；離開頁面就 pause。
+  // 影片由瀏覽器在背景預載（preload=auto），但只在當頁播放。
   function syncVideos() {
-    document.querySelectorAll('video[data-src]').forEach(v => {
+    document.querySelectorAll('section.slide video.bg').forEach(v => {
       const active = v.closest('section.slide')?.hasAttribute('data-deck-active');
-      if (active) {
-        if (!v.src) v.src = v.dataset.src;
-        v.play().catch(() => {});
-      } else {
-        v.pause();
-      }
+      if (active) v.play().catch(() => {});
+      else v.pause();
     });
   }
   addEventListener('load', () => {
-    const stage = document.querySelector('deck-stage');
-    stage?.addEventListener('slidechange', syncVideos);
+    document.querySelector('deck-stage')?.addEventListener('slidechange', syncVideos);
     syncVideos();
   });
 </script>
